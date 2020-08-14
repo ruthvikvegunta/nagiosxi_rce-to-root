@@ -5,7 +5,7 @@
 ```
 
 ## Explanation of the exploit
-`https://medium.com/tenable-techblog/rooting-nagios-via-outdated-libraries-bb79427172`
+https://medium.com/tenable-techblog/rooting-nagios-via-outdated-libraries-bb79427172
 
 ### Script Usage:
 #### Tested on v1.890, but should also work for other webmin versions in which this backdoor is installed.
